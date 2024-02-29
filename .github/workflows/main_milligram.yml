@@ -29,16 +29,6 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r requirements.txt
-        env:
-          BASE_URL: ${{ github.event.repository.name }}
-          VITE_FACE_API_KEY: ${{ secrets.VITE_FACE_API_KEY }}
-          VITE_SPEECH_API_KEY: ${{ secrets.VITE_SPEECH_API_KEY }}
-          VITE_IMAGE_API_URL: ${{secrets.VITE_IMAGE_API_URL}}
-          VITE_FACE_API_ENDPOINT: ${{secrets.VITE_FACE_API_ENDPOINT}}
-          VITE_VISION_API_ENDPOINT: ${{secrets.VITE_VISION_API_ENDPOINT}}
-          VITE_VISION_API_KEY: ${{secrets.VITE_VISION_API_KEY}}
-          VITE_CHAT_API_KEY: ${{secrets.VITE_CHAT_API_KEY}}
-          VITE_CHAT_API_ENDPOINT: ${{secrets.VITE_CHAT_API_ENDPOINT}}
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
@@ -85,4 +75,8 @@ jobs:
         with:
           app-name: 'milligram'
           slot-name: 'Production'
-          
+      - name: Set up environment variables
+        env:
+          VITE_CHAT_API_KEY: ${{secrets.VITE_CHAT_API_KEY}}
+          VITE_CHAT_API_ENDPOINT: ${{secrets.VITE_CHAT_API_ENDPOINT}}
+          AZURE_OPENAI_MODEL_NAME: ${{secrets.AZURE_OPENAI_MODEL_NAME}}
