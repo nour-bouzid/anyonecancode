@@ -44,7 +44,7 @@ import {
   faceApiEndpoint,
   speechApiKey,
   visionApiKey,
-  chatApiKey,
+  chatApiKey
 } from "../settings";
 
 @Component
