@@ -75,7 +75,6 @@ jobs:
         with:
           app-name: 'milligram'
           slot-name: 'Production'
-      - name: Set up environment variables
         env:
           VITE_CHAT_API_KEY: ${{secrets.VITE_CHAT_API_KEY}}
           VITE_CHAT_API_ENDPOINT: ${{secrets.VITE_CHAT_API_ENDPOINT}}
