@@ -17,7 +17,7 @@
 
 <script>
 import axios from 'axios';
-import { chatApiEndpoint } from "../settings";
+import { imageApiUrl } from "../settings";
 
 export default {
   data() {
@@ -41,7 +41,7 @@ export default {
       this.$refs.chatMessages.scrollTop = this.$refs.chatMessages.scrollHeight;
       
       try {
-        const response = await axios.post(`${chatApiEndpoint}chat`, {
+        const response = await axios.post(`${imageApiUrl}chat`, {
           message: this.newMessage
         });
         console.log(response)
