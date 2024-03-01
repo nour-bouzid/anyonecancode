@@ -79,8 +79,5 @@ jobs:
         with:
           app-name: 'milligram'
           slot-name: 'Production'
-          VITE_CHAT_API_KEY: ${{secrets.CHAT_API_KEY}}
-          VITE_CHAT_API_ENDPOINT: ${{secrets.CHAT_API_ENDPOINT}}
-          AZURE_OPENAI_MODEL_NAME: ${{secrets.AZURE_OPENAI_MODEL_NAME}}
   
           
