@@ -10,15 +10,14 @@ on:
       - main
   workflow_dispatch:
 
-env:
-  VITE_CHAT_API_KEY: ${{secrets.CHAT_API_KEY}}
-  VITE_CHAT_API_ENDPOINT: ${{secrets.CHAT_API_ENDPOINT}}
-  AZURE_OPENAI_MODEL_NAME: ${{secrets.AZURE_OPENAI_MODEL_NAME}}
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      VITE_CHAT_API_KEY: ${{secrets.CHAT_API_KEY}}
+      VITE_CHAT_API_ENDPOINT: ${{secrets.CHAT_API_ENDPOINT}}
+      AZURE_OPENAI_MODEL_NAME: ${{secrets.AZURE_OPENAI_MODEL_NAME}}
     steps:
       - uses: actions/checkout@v4
 
