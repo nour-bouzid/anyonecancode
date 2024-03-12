@@ -26,9 +26,9 @@ cache_header = {"Cache-Control": "max-age=31556952"}
 shared_container_client = None
 
 client = openai.AzureOpenAI(
-    api_key=os.environ.get("VITE_CHAT_API_KEY"),
+    api_key=os.environ.get("CHAT_API_KEY"),
     api_version="2023-12-01-preview",
-    azure_endpoint = os.environ.get("VITE_CHAT_API_ENDPOINT"),
+    azure_endpoint = os.environ.get("CHAT_API_ENDPOINT"),
     azure_deployment=os.environ.get("AZURE_OPENAI_MODEL_NAME"),
     
 )
